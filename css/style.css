@@ -137,6 +137,8 @@ hr {
   #links { float: none; 
             margin-left: 20%; }
   #selfie { float: none;
-            margin-bottom: 10%; }
+            margin-bottom: 10%;      
+            }
+  #selfie img {width: 100%;}
 }
 
