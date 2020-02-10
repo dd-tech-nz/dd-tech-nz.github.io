@@ -4,6 +4,8 @@ body {
 }
 
 /*  Header */
+
+
 /* @media (max-height: 1000px) {
   header .logo {
     max-height: 160px;
@@ -13,6 +15,8 @@ body {
 header .logo {
   max-width: 238px;
 } */
+
+
 
 /* Logo  */
 .logo {
@@ -44,8 +48,27 @@ hr {
   width: 90%;
   margin: 0 auto;
   padding: 30px 24px;
+  background: url(../img/doodling-with-lights-1175857.jpg) no-repeat center center;
+  background-size: 100%;
+  
 }
 
+
+
+/* #main::before {
+  content: "";
+  background: url(../img/doodling-with-lights-1175857.jpg);
+  opacity: 0.5;
+  top: -90%;
+  left: -90%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  
+} */
+
+/* Photo  */
 #selfie {
   float: left;
   
@@ -57,8 +80,11 @@ hr {
   box-shadow:  1px 8px 20px rgba(242,243,238,0.8);
 }
 
+/* Links contained in the CSS shapes */
+
 #links {
   float: right;
+  
 }
 
 .box { 
@@ -107,9 +133,41 @@ hr {
 }
 
 
+/* Link Styles */
+
+.orange h1 a {
+ color: rgb(237,124,0);
+}
+
+.blue h1 a {
+  color: rgb(81,160,157);
+}
+
+.green h1 a {
+  color: rgb(67,92,37);
+}
+
+
+.cell h1 a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cell h1 a:hover {
+  color: rgb(248,242,230);
+}
+
+#reflexions {
+  background-color: rgb(34,34,34);
+}
 
 
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 
