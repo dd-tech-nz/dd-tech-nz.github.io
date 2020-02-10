@@ -1,3 +1,4 @@
+
 /*  General */
 body {
   background: #020202;
@@ -55,19 +56,6 @@ hr {
 
 
 
-/* #main::before {
-  content: "";
-  background: url(../img/doodling-with-lights-1175857.jpg);
-  opacity: 0.5;
-  top: -90%;
-  left: -90%;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-  
-} */
-
 /* Photo  */
 #selfie {
   float: left;
@@ -80,72 +68,48 @@ hr {
   box-shadow:  1px 8px 20px rgba(242,243,238,0.8);
 }
 
-/* Links contained in the CSS shapes */
+/* Links div contains animated buttons */
 
 #links {
   float: right;
   
 }
 
+/* Style animated buttons */
 .box { 
-  display: table;
-  vertical-align: middle;
-  margin-right: 100px;
-  width: 200px;
-  height: 100px;
-  position: relative;
-  background: #696969;
-  margin-left: 100px;
-  box-shadow:  1px 8px 20px rgba(242,243,238,0.8);
-
-}
-
-.box:after {
-  margin-right: 100px;
-  content: "";
-  position: absolute;
-  left: -40px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 40px solid #696969;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-}
-.box:before {
-  
-  content: "";
-  position: absolute;
-  right: 0px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 20px solid rgba(245,245,245,0.2);
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-}
-
-.cell {
-  margin: auto;
-  line-height: 51px;
-  vertical-align: middle;
+   padding: 15px 25px;
+  font-size: 20px;
   text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #C0C0C0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #708090;
+  width: 100%; /* makes buttons same width */
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-left: -20%;
+}
+
+.box:hover {
+  background-color: #A9A9A9;
+}
+
+.box:active {
+  background-color: #696969;
+  box-shadow: 0 5px #2F4F4F;
+  transform: translateY(5px);
 }
 
 
-/* Link Styles */
 
-.orange h1 a {
- color: rgb(237,124,0);
+.box h1  {
+ color: #303030;
 }
 
-.blue h1 a {
-  color: rgb(81,160,157);
-}
 
-.green h1 a {
-  color: rgb(67,92,37);
-}
 
 
 .cell h1 a {
@@ -169,5 +133,10 @@ hr {
   clear: both;
 }
 
-
+@media (max-width: 700px) {
+  #links { float: none; 
+            margin-left: 20%; }
+  #selfie { float: none;
+            margin-bottom: 10%; }
+}
 
