@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <title>Sprint 2 Tech Blog</title>
+
+    <!-- Normalize to clean up & standardize the browser default styles: http://necolas.github.io/normalize.css/ -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    
+    <!-- Custom CSS -->
+		<link rel="stylesheet" href="styles/main.css">
+
+  <body>
+    
+    <div class="container">
+      <header>
+        <a href="https://dd-tech.co.nz" target="_blank"><img class="logo" src="img/DD-tech-logo.png" alt="DD-Tech logo"></a>
+      </header>
+
+    </div><!-- container -->
+    <hr>
+
+    <section id="positioning">
+      <div id="container">
+        <h1>CSS Positioning</h1>
+
+        <article class="clearfix">
+          <p>In CSS there is a property called <strong>position</strong>. There are a number of values associated with that property but there are three main ones that are used and are quite powerful. </p>
+          <div id="p1"><!-- parallel text 1-->
+            <p>As you can see we have a box which is a block level element that just flows vertically down a page in a normal flow.</p>
+          <p>Using positioning we can move the box around anywhere on the page.</p>
+          <p>I will start with the property of <em>relative</em>. We can use <em>relative</em> to fine tune where things are positioned. For example if we want to push a side bar outside the container but in such a way so it remains within the flow of the content.</p>
+          <p>We have access to four properties (<em>top, left, bottom & right</em>) with which we can manipulate a relatively positioned element. These properies are normally stated in pixel or percentage numeric values and are always calculated from the top left corner of the element.</p>
+        
+      </div><!-- end of parallel text 1-->
+      
+      
+       
+        <div id="relative" class="box">relative</div>
+
+        <div id="p1"><!-- parallel text 1-->
+          <p></p>
+        </article>
+       
+        
+
+     
+      <div class="terminal">
+        <p>#relative {</p>
+        <p>   position: relative;</p>
+        <p>   top: 50px; /* Move element 50px down from top left corner */</p>
+        <p>   left: -30px; /* Move element 10px right from the top left corner */</p>
+        <p>}</p>
+        </div>
+
+        
+
+       <article class="clearfix">
+          <div id="relative-test" class="box">relative</div>
+          <div id="p2">
+            <p>Here the box with the id # relative is moved 50px down and 30 pixels right using the negative value to position the box -30px from the left.</p>
+            <p>Same effect can be achieved using <em>right: 30px;</em></p>
+          </div>
+
+       </article> 
+
+       <article id="absolute-demo" class="clearfix border">
+
+        <div id="absolute" class="box">absolute
+          <div class="vertical"></div>
+        </div>
+        <div id="p3"><!-- parallel text 1-->
+          <p><em>Absolute</em> positioning is a bit trickier and kind of interesting. If I was to declare the box position property as <em>absolute</em>, it would take the box outside the flow of the parent element. It would be sitting outside the flow of the container signified by the box boundaries.</p>
+          <div class="terminal">
+            <p>#absolute {</p>
+            <p>   position: absolute;</p>
+            <p>}</p>
+          </div>
+        
+      
+    </div><!-- end of parallel text 1-->
+    
+       </article>
+
+       <article class="clearfix">
+         <div id="absolute-test" class="box">absolute</div>
+         <div id="p4">
+           <p>!!!!<span class="normal"> the container does not even know that the box element exists, it is taken outside its scope. </span> </p>
+         </div>
+       </article>
+
+       <div>
+         <p>That is the point because now we have more flexibility as to where we can move and position the box. However because there are no elements that are positioned that contain the box, the box will  default to the &lt;<em>body</em>&gt; element when specifying the top and left coordinates. Like so:</p>
+       </div>
+       <div class="terminal">
+         <p>#absolute {</p>
+         <p>  position: absolute;</p>
+         <p>  top: 0;</p>
+         <p>  left: 0;</p>
+       </div>
+
+       <article id="absolute-demo2" class="clearfix border">
+
+        <div id="absolute1" class="box">absolute
+          
+        </div>
+        <div id="p5"><!-- parallel text 1-->
+          <p>Now if I specify the container element, which does not have any specified position property, the position property of <em>relative</em>. The "ABSOLUTE" box would now sit in the top left corner of the container itself and not the &lt;<em>body</em>&gt; element.</p>
+           <p>This is because the container now has a position property and it is the parent of the box element, so the box element will now reference itself in relation to its parent container.</p>
+          <div class="terminal">
+            <p>#container {</p>
+            <p>   background: white;</p>
+            <p>   padding: 20px;</p>
+            <p>   postion: relative;</p>
+            <p>}</p>
+          </div>
+          </article>
+
+          <article id="fixed-demo" class="clearfix">
+            <div id="fixed" class="box">fixed</div>
+            <div>
+              <p>Fixed postioned elements essentially behave the same as absolute postioned elements. The elements are taken out of the flow but are fixed on the screen wherever you hard-code the position.</p>
+            </div>
+
+            <div class="terminal">
+              <p>#fixed {</p>
+              <p>  position: fixed;</p>
+              <p>  right: 150px;</p>
+              <p>  top: 150px;</p>
+            </div>
+
+            <button onclick="myFunction()" class="button">
+              <p>Click for a fixed box!</p>
+            </button>
+
+          </article>
+
+          <script>
+            document.getElementById("fixed").style.display = "none";
+            function myFunction() {
+              var x = document.getElementById("fixed");
+              if (x.style.display === "none") {
+                return x.style.display = "block";
+              } else {
+                return x.style.display = "none";
+              }
+            }
+            </script>
+
+
+  
+        <!-- <h2>Absolute Position</h2>
+        <div id="absolute" class="box">absolute</div>
+  
+        <h2>Fixed Position</h2>
+        <div id="fixed" class="box">fixed</div> -->
+      </div> <!-- #container -->
+      
+    
+</section>
+    
+      <hr>
+
+      <footer class="main">
+        <div class="container clearfix">
+        
+          <div id="uncopyright">
+            <p>Uncopyright &copy; 2020 <strong>David Dumolo</strong></p>
+            <p>Please recycle this code responsibly</p>
+          </div><!-- end uncopyright -->
+          
+          <div id="credits">
+            <p>Sustainably coded with love by <a href="https://dd-tech.co.nz/">David</a></p>
+          
+          </div><!-- end credits -->
+        </div><!-- end container -->
+      </footer>
+  </body>
+</html>

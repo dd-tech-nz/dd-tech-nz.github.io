@@ -1,0 +1,321 @@
+
+/*  General */
+body {
+  background: #020202;
+  padding: 40px;
+  font-family: Georgia, Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 10px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.6em; /* 3.6x the base font size (which is 18px in our case) */
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 2.6em; /* 2x the base font size */
+}
+
+h3 {
+  font-size: 1.6em; /* 1.6x the base font size */
+  letter-spacing: -1px; /* Can be "normal" or numerical value */
+  text-indent: 80px; /* Indents the first line of the paragraph. can be numberical value or % */
+  line-height: 1.3;
+}
+
+span {
+  
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+em {
+  color: red;
+}
+
+strong {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+/* Logo  */
+.logo {
+  margin: 20px auto;
+  display: block;
+}
+
+.logo:hover {
+    position:relative;
+    bottom:-25px;
+    /* left:-35px; */
+    /* width:300px; */
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+hr {
+  display: block;
+  margin:50px auto;
+  border-style: ridge;
+  border-width: 1px;
+  border-color: #696969;
+}
+
+#positioning {
+ background: #1b4e5e;
+  padding: 10%;
+}
+
+#positioning #container {
+  background: white;
+  padding: 20px;
+  height: 3000px;
+  
+}
+
+#positioning h2 {
+  font-size: 18px;
+}
+
+.box {
+  background: #db4e3e;
+  color:white;
+  height: 200px;
+  width:200px;
+  text-align: center;
+  line-height: 200px;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+#relative {
+  float: left;
+  width: 23%;
+}
+
+#absolute {
+  margin-top: 100px;
+  float: left;
+  width: 23%;
+  position: relative;
+}
+
+#absolute1 {
+  /* margin-top: 100px; */
+  float: left;
+  width: 23%;
+  position:absolute;
+}
+
+#p1 {
+  float: right;
+  width: 75%;
+}
+
+#p2 {
+  margin-top: 50px;
+  padding: 50px;
+}
+
+#p3 {
+  margin-top: 100px;
+  width: 75%;
+  float: right;
+    
+}
+
+#p4 {
+  float: right;
+  font-size: 5em;
+  color: red;
+  width: 75%;
+}
+
+#p5 {
+  width: 75%;
+  float: right;
+  
+
+}
+
+#p5 p {
+  padding-right: 2%;
+}
+
+#absolute-demo {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  
+}
+
+#absolute-demo2 {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+/* Style vertical arrow */
+
+.vertical {
+  border-left: 5px solid red;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+
+.vertical:after {
+  content: '';
+	display: block;  
+	position: absolute;
+	left: -12px;
+	top: 40px;
+	width: 0;
+	height: 0;
+	border-top: 20px solid red;
+	border-right: 10px solid transparent;
+	border-bottom: 0 solid transparent;
+  border-left: 10px solid transparent;
+  z-index: 10;
+}
+
+
+
+/* Terminal Styles */
+
+.terminal {
+  padding: 2% 2%;
+  color: white;
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  /* height: 100vh; */
+  text-shadow: 0 0 5px #C8C8C8;
+}
+
+.border {
+  border: dotted;
+  color: black;
+}
+
+/* Relative Demonstration box style */
+#relative-test {
+  position: relative;
+  top: 50px;
+  left: -30px;
+  /* right: 30px; */
+  float: left;
+  width: 23%;
+}
+
+#absolute-test {
+  position: absolute;
+  width: 17%;
+}
+
+#fixed {
+  position: fixed;
+  right:300px;
+  bottom: 300px;
+  display: none;
+}
+
+#fixed-demo {
+  position: relative;
+}
+
+/* Style animated buttons */
+.button { 
+ /* padding: 15px 25px; */
+ /* font-size: 20px; */
+ margin-top: 3%;
+ text-align: center;
+ cursor: pointer;
+ outline: none;
+ color: #fff;
+ background-color: #C0C0C0;
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 9px #708090;
+ width: 30%; /* makes buttons same width */
+ /* table-layout: fixed; */
+ border-collapse: collapse;
+ /* margin-left: -20%; */
+ overflow: hidden;
+ 
+}
+
+.button:hover {
+ background-color: #A9A9A9;
+}
+
+.button:active {
+ background-color: #696969;
+ box-shadow: 0 5px #2F4F4F;
+ transform: translateY(5px);
+}
+
+
+
+.button p  {
+color: #303030;
+font-size: 20px;
+text-align: center;
+
+
+}
+
+
+
+
+/* Footer */
+
+footer.main {
+  background: #2c3746; 
+  color: #f2f3ee;
+  padding: 30px 0;
+ 
+}
+
+footer.main a:hover {
+  color: #f2f3ee;
+}
+
+#uncopyright, #credits {
+  width: 300px;
+  float: left;
+  padding: 10px 0 10px 50px;
+}
+
+#uncopyright {
+  background: url('../img/icon-recycle.png') center left no-repeat;
+}
+
+#credits {
+  background: url('../img/icon-apple.png') center left no-repeat;
+  float: right;
+  margin-top: 9px;
+}
+/* Force Elements to Self Clear its Children: http://css-tricks.com/snippets/css/clear-fix/ */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}
+
+
