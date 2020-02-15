@@ -21,20 +21,16 @@ header .logo {
 
 
 /* Logo  */
-.logo {
-  margin: 20px auto;
+
+#dd-tech {
   display: block;
+  margin: 20px auto;
+  width: 300px;
+  height: 88px;
+  margin-top: 10px;
+  background-image: url('/img/DD-tech-logo.png');
 }
 
-.logo:hover {
-    position:relative;
-    bottom:-25px;
-    /* left:-35px; */
-    /* width:300px; */
-    height:auto;
-    display:block;
-    z-index:999;
-}
 
 hr {
   display: block;
