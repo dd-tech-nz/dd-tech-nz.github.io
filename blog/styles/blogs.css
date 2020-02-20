@@ -1,0 +1,66 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.book {
+    font-size: 14px;
+}
+
+.learning {
+    margin: 0 auto;
+}
+
+.breadcrumb a {
+    color: green;
+}
+
+
+
+.card img {
+  height: 200px;
+ 
+}
+
+.is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+
+.grid {
+	display: grid;
+	grid-template-columns:
+		[xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid *  { grid-column: md; }
+.grid-xl { grid-column: xl; }
+
+/* image */
+   .bg-img { 
+        background-image: url(../img/bcode.jpg) ;
+        background-position: center center;
+        background-repeat:  no-repeat;
+        background-attachment: fixed;
+        background-size:  cover;
+        background-color: #999;
+
+ }
+
+
+.img-responsive {
+      display: block; 
+      max-width: 100%;
+      height: auto;
+   } 
+
+   /* Kras */
+.kras {
+    background-color: white;
+}
+
+
+@media (max-width: 672px) {
+	:root {
+		font-size: 90%;
+	}
+}
