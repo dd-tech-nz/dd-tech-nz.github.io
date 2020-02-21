@@ -56,15 +56,15 @@ strong {
   display: block;
 }
 
-.logo:hover {
+/*.logo:hover {
     position:relative;
     bottom:-25px;
     /* left:-35px; */
     /* width:300px; */
-    height:auto;
+   /* height:auto;
     display:block;
     z-index:999;
-}
+}*/
 
 hr {
   display: block;
