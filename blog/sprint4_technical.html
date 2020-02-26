@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Sprint 4 Technical Blog</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link rel="stylesheet" href="styles/blogs.css">
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+		
+    </head>
+    
+    <body>
+        <section class="section is-paddingless-horizontal">
+            <div class="container grid">
+                <nav class="breadcrumb grid-xl" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="http://dd-tech-nz.github.io/">Home</a></li>
+                        <li><a href="http://dd-tech-nz.github.io/blog/sprint1-cultural.html">Identity, Values and Strengths Exploration</a></li>
+                        <li><a href="http://dd-tech-nz.github.io/blog/sprint2-cultural.html">Learning Reflections</a></li>
+                        <li><a href="http://dd-tech-nz.github.io/blog/sprint3-cultural.html" >Emotional Intelligence Blog</a></li>
+                    </ul>
+                </nav> <!--  ./ Top Breadcrumb -->
+
+                <nav class="breadcrumb grid-xl" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="https://dd-tech-nz.github.io/blog/sprint1-technical.html">Technical Blog 1</a></li>
+                        <li><a href="https://dd-tech-nz.github.io/blog/sprint2_technical.html">Technical Blog 2</a></li>
+                        <li><a href="https://dd-tech-nz.github.io/blog/sprint3_technical.html">Technical Blog 3</a></li>
+                        <li class="is-active"><a href="#" aria-current="page">Technical Blog 4</a></li>
+                    </ul>
+                </nav><!-- ./ Bottom Breadcrumb -->
+            </div><!-- ./container grid -->
+        </section><!-- ./ navbar section -->
+
+        <section class="section is-paddingless-horizontal" style="padding-top: 0;"> 
+            <figure class="container grid">
+                <article class="media center kras">
+                    <figure class="media-left">
+                    <figure class="image is-64x64">
+                        <img src="img/Krasavka.jpg">
+                    </figure>
+                    </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <div>
+                      <strong>Dumolo, David</strong> <a href="https://enspiral-dev-academy.slack.com/team/USLNH1GDR" target="_blank">david_dumolo_kahikatea_20</a>
+                      <br>
+                        <span class="has-text-grey">On this path I go. On this road I grow. My dreams unfold. I did it all alone.
+                            <br>
+                        <time datetime="2020-02-07">Feb 20</time> · 10 min read</span>
+                    
+                  </div>
+                  
+                </div>
+                
+              </article><!-- ./ media article -->
+
+              <div class="learning section is-paddingless-horizontal">
+                <h1 class="title is-2">Learning Competencies</h1>
+                <h2 class="subtitle is-3 has-text-grey-light">Sprint 4 Technical Blog</h2>
+              </div><!-- ./ title -->
+
+              <div class="content notification is-medium">
+                <h1 align="center">The time I got blocked on a simple problem</h1>
+                <div class="image emoji is-128x128"> 
+                    <img src="img/puzzled.png" alt="puzzled emoji">
+                  </div>
+                  <br>
+                <p>
+                    During the <strong>deBee Kata Challenge</strong> I created a function which outputted the string argument to the console log so I can get a better understanding of the problem in where I was to parse the strings to remove the word “buzz”.  The console log showed three separate strings. In the function that I was creating I used the string’s split method to form an array and to my dismay I noticed the console log showed the array variable content as consisting of three arrays. 
+                </p>
+                <p>
+                    I must have spent close to two hours researching and testing on how to merge arrays and how to split the strings on the newline, carriage return and word boundaries only to find that nothing seemed to work. I thought either this challenge is horrifically difficult or I am not understanding something. It was only after I asked other members on the <strong>#foundation</strong> Slack channel was I told that what I was seeing on my console log was not the actual string variable but rather the input from the tests. After that the challenge did not seem that difficult and I soon came to a solution.
+
+                </p>
+                <h1 align="center">The time I solved a problem in an elegant way</h1>
+                
+                <div class="image emoji is-128x128"> 
+                    <img src="img/smug.png" alt="smug emoji">
+                  </div>
+                  <br>
+                  <p>
+                    The <strong>JS-Olympics Kata Challenge</strong> gave me the opportunity to learn the arrow function. Basically, the arrow function enables us to assign an anonymous function to a variable. The way the arrow function works is that it does not even require bracket notations if passed 1 or less arguments and returns a value by default so does not require a return statement.
+                  </p>
+                  <p>
+                    I resolved the <strong>Jumble your words</strong> and <strong>Odd Out</strong> challenges using just one line of code:
+                  </p>
+                  <pre class="is-size-7">
+// 2. Jumble your words
+
+const unjumble = string => string.split("").reverse().join("")
+
+// 3. Odds Out
+
+const removeOdds = array => array.filter( x => x % 2 === 0)
+                    
+                  </pre>
+
+            </div>
+
+            <div class="content notification is-medium">
+                <h1 align="center">Problem Solving Techniques and Processes</h1>
+                <h3>Pseudo Code</h3>
+                <p>
+                    Pseudocode is not something I have used much in the past however I believe it is a useful method to document the logic flow in code for myself and also to collaborate with other team members involved in working on the code. It has the additional benefit of being able to show the code to customers and people who are not familiar with coding terminology because it is written in plain English.
+                </p>
+                <p>
+                    I made use of pseudocode in solving the <strong>FizzBuzz</strong> challenge:
+                </p>
+                <pre>
+Check number
+
+if number fully divides by three and by five
+	number is FizzBuzz
+
+if number fully divides by three
+	number is fizz
+
+if number fully divides by five
+	number is buzz
+
+else
+	number is unchanged
+
+add number to array
+
+Check next number
+                </pre>
+
+                <h3>Trying something</h3>
+                <p>
+                    This is probably my favourite method of problem solving because I like to just get stuck into coding and learnign the syntax by practice. I believe that being able to relate to experience helps me retain the knowledge many fold over simply reading about it or watching a video. When reading or learning from a video course I like to actively code along.
+                </p>
+                <h3>Rubber ducky method</h3>
+                <p>
+                    This is a method where the coder, when running into difficulties, describes what he is trying to achieve and the issues he is having to a rubber ducky. This often cajoles the coder to come up with a resolution to the problem that he is experiencing.
+                </p>
+                <p>
+                    I use what is known as an <strong>Advanced Rubber Ducky</strong> method and describe my coding issues to my Rottweiler.
+                </p>
+                <div class="image emoji is-5by4"> 
+                    <img src="img/IMG_5362.jpg" alt="photo of my dog">
+                </div>
+                <h3>Reading error messages</h3>
+                <p>
+                    Error messages can provide valuable clues to where the problem lies with the code for example where a variable or function has not been defined and provides the line number where the issue occured. It is a method I use time and time again in my coding.
+                </p>
+                <h3>Console.logging</h3>
+                <p>
+                    Console logging enables us to log values of variables in our code to the console window to check the logic flow of our code. We can also enable the console to provide an alert from within a block of code to verify that it has ran.
+                </p>
+                <h3>Googling</h3>
+                <p>
+                    Google is by far my best mentor and learning companion when it comes not just to coding but for any IT related issue, or any issue for that matter. 
+                </p>
+                <p>
+                    I use Google operators frequently such as <strong>Site:stackoverflow.com</strong> or <strong>site:bulma.io</strong> to narrow my searhces to a specific site. I also use the quotes to give me an exact match, the minus symbol to exclude search words not condicive to my search. Learning basic Google hacking is a skill that pays dividends in IT.
+                </p>
+                <h3>Asking my peers for help</h3>
+                <p>
+                    Generally I like to do my own reasearch first using all resources available to me before engaging my peers. However, there was one occasion where I engaged my peers during this sprint. This was when I got locked into tunnel vision and was unaware of what I really needed to do for the challenge. I am glad I did and I think communication, team work and collaboration is important in the workplace.
+                </p>
+                <h3>Asking coaches for help</h3>
+                <p>
+                    As mentioned previously I prefere to do my own reasearch first. However, engaging the coaches and facilitators has the advantage of having something explained on own terms and also gives the opportunity to ask more questions.
+                </p>
+                <h3>Improving my process with reflection</h3>
+                <p>
+                    Since starting foundations at EDA reflection is now part og my muscle memory. I reflect back on every challenge that I complete and look for alternative ways to get things done, and ways that the process can be improved. Often when I code up a solution the code does the job but can be a little ugly with penty of room for streamlining and improvement.
+                </p>
+
+
+
+                
+
+
+
+            </div>
+
+              
+
+
+
+
+        
+    </body>

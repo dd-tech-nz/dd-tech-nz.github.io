@@ -24,6 +24,9 @@
  
 }
 
+.emoji {
+	margin: 0 auto;
+}
 
 
 .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
