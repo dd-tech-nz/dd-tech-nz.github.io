@@ -43,12 +43,11 @@ hr {
 /* Main Section */
 
 #main {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 30px 24px;
   background: url(../img/doodling-with-lights-1175857.jpg) no-repeat center center;
   background-size: 100%;
-  
 }
 
 
@@ -68,13 +67,13 @@ hr {
 /* Container for animated buttons */
 
 #links {
-  float: right;
+  float: left;
   
 }
 
 /* Style animated buttons */
 .box { 
-   padding: 15px 25px;
+  padding: 15px 25px;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
@@ -201,12 +200,19 @@ footer.main a:hover {
 	}
 
 /* Media querie to display in blocks for narrow screens */
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
   #links { float: none; 
             margin-left: 20%; }
   #selfie { float: none;
-            margin-bottom: 10%;      
+            margin-bottom: 10%;  
             }
-  #selfie img {width: 100%;}
+  #selfie img {width: 50%;
+              margin-left: 21%;}
+}
+
+@media (min-width: 1202px) {
+  #selfie { float: left; }
+  #links { float: right;}
+  #selfie img { width: 70%;}
 }
 
